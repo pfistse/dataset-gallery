@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/pfistse/dataset-gallery/static/css/main.8a5c3d8a.css",
+    "main.js": "/pfistse/dataset-gallery/static/js/main.9f6f71fe.js",
+    "index.html": "/pfistse/dataset-gallery/index.html",
+    "main.8a5c3d8a.css.map": "/pfistse/dataset-gallery/static/css/main.8a5c3d8a.css.map",
+    "main.9f6f71fe.js.map": "/pfistse/dataset-gallery/static/js/main.9f6f71fe.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8a5c3d8a.css",
+    "static/js/main.9f6f71fe.js"
+  ]
+}
