@@ -40,7 +40,7 @@ jobs:
         git add public/
         if ! git diff-index --quiet HEAD --; then
           git commit -am 'added preview videos (automated)'
-          git push
+          git push https://$GH_PAT@github.com/pfistse/dataset-gallery.git HEAD:main
         else
           echo "No changes to commit"
         fi
