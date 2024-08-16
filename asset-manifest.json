@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/dataset-gallery-test/static/css/main.44cd72e0.css",
+    "main.js": "/dataset-gallery-test/static/js/main.e7192bca.js",
+    "index.html": "/dataset-gallery-test/index.html",
+    "main.44cd72e0.css.map": "/dataset-gallery-test/static/css/main.44cd72e0.css.map",
+    "main.e7192bca.js.map": "/dataset-gallery-test/static/js/main.e7192bca.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.44cd72e0.css",
+    "static/js/main.e7192bca.js"
+  ]
+}
