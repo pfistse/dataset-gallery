@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/dataset-gallery/static/css/main.44cd72e0.css",
-    "main.js": "/dataset-gallery/static/js/main.286f666e.js",
+    "main.css": "/dataset-gallery/static/css/main.12686f74.css",
+    "main.js": "/dataset-gallery/static/js/main.5e473a40.js",
     "index.html": "/dataset-gallery/index.html",
-    "main.44cd72e0.css.map": "/dataset-gallery/static/css/main.44cd72e0.css.map",
-    "main.286f666e.js.map": "/dataset-gallery/static/js/main.286f666e.js.map"
+    "main.12686f74.css.map": "/dataset-gallery/static/css/main.12686f74.css.map",
+    "main.5e473a40.js.map": "/dataset-gallery/static/js/main.5e473a40.js.map"
   },
   "entrypoints": [
-    "static/css/main.44cd72e0.css",
-    "static/js/main.286f666e.js"
+    "static/css/main.12686f74.css",
+    "static/js/main.5e473a40.js"
   ]
 }
