@@ -57,13 +57,13 @@ body {
   gap: 10px;
 }
 
-.tile-shape {
+.chip-set {
   display: flex;
   justify-content: center;
   gap: 5px;
 }
 
-.one-sided-box {
+.chip {
   padding: 0 5px;
   height: 20px;
   background-color: #555;
@@ -75,7 +75,7 @@ body {
   font-size: 10px;
 }
 
-.two-sided-box {
+.two-sided-chip {
   height: 20px;
   display: inline-flex;
   border-radius: 4px;
@@ -83,23 +83,23 @@ body {
   font-size: 10px;
 }
 
-.two-sided-box .left-part {
+.two-sided-chip .left-part {
   background-color: #555;
   padding: 0 5px;
   display: flex;
   align-items: center;
 }
 
-.two-sided-box .right-part {
+.two-sided-chip .right-part {
   background-color: #888;
   padding: 0 5px;
   display: flex;
   align-items: center;
 }
 
-.split-box {
+.split-chip {
   height: 20px;
-  background-color: #555;
+  background-color: #888;
   color: white;
   display: flex;
   justify-content: center;
@@ -108,20 +108,20 @@ body {
   font-size: 10px;
 }
 
-.split-box span {
+.split-chip span {
   padding: 0 5px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-left: 1px solid rgb(150, 149, 149);
+  border-left: 1px solid #555;
   height: 100%;
 }
 
-.split-box span:first-child {
+.split-chip span:first-child {
   border-left: none; /* Remove the border from the first element */
 }
 
-.green-box {
+.green-chip {
   background-color: rgb(49, 97, 49);
 }
 

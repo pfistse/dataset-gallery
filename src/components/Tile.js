@@ -18,16 +18,16 @@ const Tile = ({ datasetKey, dataset }) => {
       />
       <div className="tile-info">
         <div className="tile-title">{datasetKey}</div>
-        <div className="tile-shape">
-          <div className="two-sided-box">
+        <div className="chip-set">
+          <div className="two-sided-chip">
             <span class="left-part">sims</span>
             <span class="right-part">{dataset["num_sims"]}</span>
           </div>
-          <div className="two-sided-box">
+          <div className="two-sided-chip">
             <span class="left-part">frames</span>
             <span class="right-part">{dataset["num_frames"]}</span>
           </div>
-          <div className="one-sided-box green-box tile-dropdown">
+          <div className="chip green-chip tile-dropdown">
             <select
               value={dataset["field_desc"][selectedField]}
               onChange={handleFieldChange}
@@ -39,11 +39,18 @@ const Tile = ({ datasetKey, dataset }) => {
               ))}
             </select>
           </div>
-          <div className="split-box">
+          <div className="split-chip">
             {dataset["num_spatial_dim"] >= 1 && <span>x</span>}
             {dataset["num_spatial_dim"] >= 2 && <span>y</span>}
             {dataset["num_spatial_dim"] >= 3 && <span>z</span>}
           </div>
+        </div>
+        <div className="chip-set">
+          {dataset["const_desc"].map((element) => (
+            <div className="chip" key={element}>
+              {element}
+            </div>
+          ))}
         </div>
       </div>
     </div>
