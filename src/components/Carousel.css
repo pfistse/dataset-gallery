@@ -1,0 +1,50 @@
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.carousel {
+  width: 70%;
+  overflow: hidden;
+}
+
+.carousel-content {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  flex: 0 0 calc((100% - 2 * 20px) / 3);
+  transition: transform 0.5s ease-in-out;
+  transform: scale(0.95);
+}
+
+.carousel-item.center {
+  flex: 0 0 calc((100% - 2 * 20px) / 3);
+  transform: scale(1);
+}
+
+.carousel-button.left,
+.carousel-button.right {
+  position: absolute;
+  top: calc(50% - 25px);
+  width: 50px;
+  height: 50px;
+  box-shadow: -2px 2px 0 white;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.carousel-button.left {
+  left: 5%;
+  transform: rotate(45deg);
+}
+
+.carousel-button.right {
+  right: 5%;
+  transform: rotate(-135deg);
+}

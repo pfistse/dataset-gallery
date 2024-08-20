@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Tile.css";
 
 const Tile = ({ datasetKey, dataset }) => {
   const [selectedField, setSelectedField] = useState(0);
