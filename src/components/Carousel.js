@@ -1,8 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Carousel.css";
 
 const Carousel = ({ items }) => {
-  const [currentIndex, setCurrentIndex] = useState(items.length < 1 ? 0 : 1);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    if (items.length > 1) {
+      setCurrentIndex(1);
+    } else {
+      setCurrentIndex(0);
+    }
+  }, [items]);
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
