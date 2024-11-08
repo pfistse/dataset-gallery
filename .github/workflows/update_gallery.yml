@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  create-videos:
+  update-gallery:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,7 +23,7 @@ jobs:
         sudo apt install ffmpeg
         python -m pip install --upgrade pip
         pip install setuptools numpy matplotlib opencv-python
-        pip install git+https://github.com/tum-pbs/pbdl-dataset
+        pip install git+https://github.com/tum-pbs/pbdl-dataset@develop
 
     - uses: actions/checkout@v2
     - name: fetch index
