@@ -56,8 +56,8 @@ def create_preview_video(
     video = cv2.VideoWriter("tmp.mp4", fourcc, float(fps), high_res_size)
 
     # normalize
-    min, max = frames.min(), frames.max()
-    frames = (frames - min) / (max - min)
+    min_val, max_val = frames.min(), frames.max()
+    frames = (frames - min_val) / (max_val - min_val)
     frames = cmap(frames)
     frames = (frames[:, :, :, :3] * 255).astype(np.uint8)
 
