@@ -7,7 +7,7 @@ datasets = pbdl.dataset.index()
 os.makedirs("./public/preview", exist_ok=True)
 
 for d in datasets.keys():
-    for f in range(len(datasets[d]["fields"])):
+    for f in range(len(datasets[d]["Fields"])):
         path = f"./public/preview/{d}_{f}.mp4"
         if os.path.exists(path):
             continue

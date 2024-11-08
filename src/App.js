@@ -2,18 +2,16 @@ import React, { useEffect, useState } from "react";
 
 import "./App.css";
 import Carousel from "./components/Carousel";
+import Grid from "./components/Grid";
 import Tile from "./components/Tile";
 
 const App = () => {
   const [datasets, setDatasets] = useState({});
 
   useEffect(() => {
-    const corsProxy = "https://corsproxy.io/?";
-    const jsonUrl =
-      "https://syncandshare.lrz.de/dl/fiFpt1oyzXW8J4uvg43JF8/index_global.json";
-    const cacheBuster = `?cb=${new Date().getTime()}`;
+    const jsonUrl = `${process.env.PUBLIC_URL}/index.json`;
 
-    fetch(corsProxy + jsonUrl + cacheBuster)
+    fetch(jsonUrl)
       .then((response) => response.json())
       .then((data) => {
         setDatasets(data);
@@ -23,11 +21,12 @@ const App = () => {
 
   const items = Object.keys(datasets).map((key) => (
     <Tile key={key} datasetKey={key} dataset={datasets[key]} />
-  ))
+  ));
 
   return (
     <div className="App">
-      <Carousel items={items} />
+      {/* <Carousel items={items} /> */}
+      <Grid items={items} />
     </div>
   );
 };

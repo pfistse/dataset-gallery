@@ -5,7 +5,7 @@ const Tile = ({ datasetKey, dataset }) => {
   const [selectedField, setSelectedField] = useState(0);
 
   const handleFieldChange = (event) => {
-    setSelectedField(dataset["field_desc"].indexOf(event.target.value));
+    setSelectedField(dataset["Fields"].indexOf(event.target.value));
   };
 
   return (
@@ -22,18 +22,18 @@ const Tile = ({ datasetKey, dataset }) => {
         <div className="chip-set">
           <div className="two-sided-chip">
             <span class="left-part">sims</span>
-            <span class="right-part">{dataset["num_sims"]}</span>
+            {/* <span class="right-part">{dataset["numSims"]}</span> */}
           </div>
           <div className="two-sided-chip">
             <span class="left-part">frames</span>
-            <span class="right-part">{dataset["num_frames"]}</span>
+            {/* <span class="right-part">{dataset["numFrames"]}</span> */}
           </div>
           <div className="chip green-chip tile-dropdown">
             <select
-              value={dataset["field_desc"][selectedField]}
+              value={dataset["Fields"][selectedField]}
               onChange={handleFieldChange}
             >
-              {dataset["field_desc"].map((field) => (
+              {dataset["Fields"].map((field) => (
                 <option key={field} value={field}>
                   {field}
                 </option>
@@ -41,13 +41,13 @@ const Tile = ({ datasetKey, dataset }) => {
             </select>
           </div>
           <div className="split-chip">
-            {dataset["num_spatial_dim"] >= 1 && <span>x</span>}
-            {dataset["num_spatial_dim"] >= 2 && <span>y</span>}
-            {dataset["num_spatial_dim"] >= 3 && <span>z</span>}
+            {/* {dataset["numSpatialDim"] >= 1 && <span>x</span>}
+            {dataset["numSpatialDim"] >= 2 && <span>y</span>}
+            {dataset["numSpatialDim"] >= 3 && <span>z</span>} */}
           </div>
         </div>
         <div className="chip-set">
-          {dataset["const_desc"].map((element) => (
+          {dataset["Constants"].map((element) => (
             <div className="chip" key={element}>
               {element}
             </div>

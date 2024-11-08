@@ -1,4 +1,4 @@
-name: create preview videos for datasets
+name: update dataset gallery
 
 on:
   workflow_dispatch:
@@ -23,9 +23,12 @@ jobs:
         sudo apt install ffmpeg
         python -m pip install --upgrade pip
         pip install setuptools numpy matplotlib opencv-python
-        pip install git+https://$GH_PAT@github.com/pfistse/pbdl-dataset.git
+        pip install git+https://github.com/tum-pbs/pbdl-dataset
 
     - uses: actions/checkout@v2
+    - name: fetch index
+      run: |
+        python scripts/fetch_index.py
     - name: load datasets and create videos
       run: |
         python scripts/create_videos.py
