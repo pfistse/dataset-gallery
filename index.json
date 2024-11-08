@@ -20,6 +20,23 @@
         "numFrames": 500,
         "numSpatialDim": 2
     },
+    "incompressible-wake-flow-tiny": {
+        "PDE": "Navier-Stokes",
+        "Fields Scheme": "VVd",
+        "Fields": [
+            "Velocity X",
+            "Velocity Y",
+            "Density"
+        ],
+        "Constants": [
+            "Mach number"
+        ],
+        "Dt": 0.01,
+        "isSingleFile": false,
+        "numSims": 3,
+        "numFrames": 1300,
+        "numSpatialDim": 2
+    },
     "ks-dataset": {
         "Constants": [
             "Domain size"
@@ -51,23 +68,6 @@
         "isSingleFile": false,
         "numSims": 3,
         "numFrames": 1000,
-        "numSpatialDim": 2
-    },
-    "incompressible-wake-flow-tiny": {
-        "PDE": "Navier-Stokes",
-        "Fields Scheme": "VVd",
-        "Fields": [
-            "Velocity X",
-            "Velocity Y",
-            "Density"
-        ],
-        "Constants": [
-            "Mach number"
-        ],
-        "Dt": 0.01,
-        "isSingleFile": false,
-        "numSims": 3,
-        "numFrames": 1300,
         "numSpatialDim": 2
     },
     "airfoils": {
