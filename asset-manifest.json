@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/dataset-gallery/static/css/main.dba4bc99.css",
+    "main.js": "/dataset-gallery/static/js/main.311ebdd3.js",
+    "index.html": "/dataset-gallery/index.html",
+    "main.dba4bc99.css.map": "/dataset-gallery/static/css/main.dba4bc99.css.map",
+    "main.311ebdd3.js.map": "/dataset-gallery/static/js/main.311ebdd3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dba4bc99.css",
+    "static/js/main.311ebdd3.js"
+  ]
+}
