@@ -15,7 +15,7 @@ for d in index.keys():
 
     index[d]["numSims"] = dataset.num_sims
     index[d]["numFrames"] = dataset.num_frames
-    index[d]["numSpatialDim"] = dataset.num_spatial_dims
+    index[d]["numSpatialDim"] = dataset.num_spatial_dim
 
 with open("./public/index.json", "w") as f:
     json.dump(index, f, indent=4)
