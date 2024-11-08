@@ -22,11 +22,11 @@ const Tile = ({ datasetKey, dataset }) => {
         <div className="chip-set">
           <div className="two-sided-chip">
             <span class="left-part">sims</span>
-            {/* <span class="right-part">{dataset["numSims"]}</span> */}
+            <span class="right-part">{dataset["numSims"]}</span>
           </div>
           <div className="two-sided-chip">
             <span class="left-part">frames</span>
-            {/* <span class="right-part">{dataset["numFrames"]}</span> */}
+            <span class="right-part">{dataset["numFrames"]}</span>
           </div>
           <div className="chip green-chip tile-dropdown">
             <select
@@ -41,9 +41,9 @@ const Tile = ({ datasetKey, dataset }) => {
             </select>
           </div>
           <div className="split-chip">
-            {/* {dataset["numSpatialDim"] >= 1 && <span>x</span>}
+            {dataset["numSpatialDim"] >= 1 && <span>x</span>}
             {dataset["numSpatialDim"] >= 2 && <span>y</span>}
-            {dataset["numSpatialDim"] >= 3 && <span>z</span>} */}
+            {dataset["numSpatialDim"] >= 3 && <span>z</span>}
           </div>
         </div>
         <div className="chip-set">

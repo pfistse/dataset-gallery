@@ -8,42 +8,49 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: checkout repository
-      uses: actions/checkout@v3
+      - name: checkout repository
+        uses: actions/checkout@v3
 
-    - name: set up python
-      uses: actions/setup-python@v3
-      with:
-        python-version: '3.x'
+      - name: set up python
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.x"
 
-    - name: install dependencies
-      env:
-        GH_PAT: ${{ secrets.GH_PAT }}
-      run: |
-        sudo apt install ffmpeg
-        python -m pip install --upgrade pip
-        pip install setuptools numpy matplotlib opencv-python
-        pip install git+https://github.com/tum-pbs/pbdl-dataset@develop
+      - name: install dependencies
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: |
+          sudo apt install ffmpeg
+          python -m pip install --upgrade pip
+          pip install setuptools numpy matplotlib opencv-python
+          pip install git+https://github.com/tum-pbs/pbdl-dataset@develop
 
-    - uses: actions/checkout@v2
-    - name: fetch index
-      run: |
-        python scripts/fetch_index.py
-    - name: load datasets and create videos
-      run: |
-        python scripts/create_videos.py
+      - uses: actions/checkout@v2
+      - name: fetch index
+        run: |
+          python scripts/fetch_index.py
+      - name: load datasets and create videos
+        run: |
+          python scripts/create_videos.py
 
-    - name: commit and push videos
-      env:
-        GH_PAT: ${{ secrets.GH_PAT }}
-      run: |
-        git config --global user.name 'Sebastian Pfister'
-        git config --global user.email 'sebastian.pfister@tum.de'
-        git status
-        git add public/
-        if ! git diff-index --quiet HEAD --; then
-          git commit -am 'added preview videos (automated)'
-          git push https://$GH_PAT@github.com/pfistse/dataset-gallery.git HEAD:main
-        else
-          echo "No changes to commit"
-        fi
+      - name: commit and push videos
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: |
+          git config --global user.name 'Sebastian Pfister'
+          git config --global user.email 'sebastian.pfister@tum.de'
+          git status
+          git add public/
+          if ! git diff-index --quiet HEAD --; then
+            git commit -am 'added preview videos (automated)'
+            git push https://$GH_PAT@github.com/pfistse/dataset-gallery.git HEAD:main
+          else
+            echo "No changes to commit"
+          fi
+      - name: deploy to github pages
+        if: success()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages
