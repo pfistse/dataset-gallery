@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import "./App.css";
-import Carousel from "./components/Carousel";
+// import Carousel from "./components/Carousel";
 import Grid from "./components/Grid";
 import Tile from "./components/Tile";
 
