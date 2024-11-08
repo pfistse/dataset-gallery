@@ -10,7 +10,8 @@
         "Constants": [
             "Mach number"
         ],
-        "Dt": 0.01
+        "Dt": 0.01,
+        "isSingleFile": false
     },
     "transonic-cylinder-flow-tiny": {
         "Constants": [
@@ -24,18 +25,8 @@
             "Pressure"
         ],
         "Fields Scheme": "VVdp",
-        "PDE": "Navier-Stokes"
-    },
-    "ks-dataset": {
-        "Constants": [
-            "Domain size"
-        ],
-        "Dt": 0.01,
-        "Fields": [
-            "Velocity"
-        ],
-        "Fields Scheme": "v",
-        "PDE": "Kuramoto-Sivashinsky"
+        "PDE": "Navier-Stokes",
+        "isSingleFile": false
     },
     "solver-in-the-loop-wake-flow": {
         "Constants": [
@@ -52,6 +43,31 @@
             "Velocity y"
         ],
         "Fields Scheme": "mVV",
-        "PDE": "Navier-Stokes with Obstacle"
+        "PDE": "Navier-Stokes with Obstacle",
+        "isSingleFile": false
+    },
+    "ks-dataset": {
+        "Constants": [
+            "Domain size"
+        ],
+        "Dt": 0.01,
+        "Fields": [
+            "Velocity"
+        ],
+        "Fields Scheme": "v",
+        "PDE": "Kuramoto-Sivashinsky",
+        "isSingleFile": false
+    },
+    "airfoils": {
+        "PDE": "Navier-Stokes",
+        "Fields Scheme": "FFs",
+        "Fields": [
+            "Freestream flow velocity x",
+            "Freestream flow velocity y",
+            "Airfoil shape"
+        ],
+        "Constants": [],
+        "Dt": 0.01,
+        "isSingleFile": true
     }
 }
