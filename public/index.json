@@ -1,18 +1,4 @@
 {
-    "incompressible-wake-flow-tiny": {
-        "PDE": "Navier-Stokes",
-        "Fields Scheme": "VVd",
-        "Fields": [
-            "Velocity X",
-            "Velocity Y",
-            "Density"
-        ],
-        "Constants": [
-            "Mach number"
-        ],
-        "Dt": 0.01,
-        "isSingleFile": false
-    },
     "solver-in-the-loop-wake-flow": {
         "Constants": [
             "Re"
@@ -29,7 +15,10 @@
         ],
         "Fields Scheme": "mVV",
         "PDE": "Navier-Stokes with Obstacle",
-        "isSingleFile": false
+        "isSingleFile": false,
+        "numSims": 10,
+        "numFrames": 500,
+        "numSpatialDim": 2
     },
     "ks-dataset": {
         "Constants": [
@@ -41,7 +30,10 @@
         ],
         "Fields Scheme": "v",
         "PDE": "Kuramoto-Sivashinsky",
-        "isSingleFile": false
+        "isSingleFile": false,
+        "numSims": 6,
+        "numFrames": 5200,
+        "numSpatialDim": 1
     },
     "transonic-cylinder-flow-tiny": {
         "Constants": [
@@ -56,7 +48,27 @@
         ],
         "Fields Scheme": "VVdp",
         "PDE": "Navier-Stokes",
-        "isSingleFile": false
+        "isSingleFile": false,
+        "numSims": 3,
+        "numFrames": 1000,
+        "numSpatialDim": 2
+    },
+    "incompressible-wake-flow-tiny": {
+        "PDE": "Navier-Stokes",
+        "Fields Scheme": "VVd",
+        "Fields": [
+            "Velocity X",
+            "Velocity Y",
+            "Density"
+        ],
+        "Constants": [
+            "Mach number"
+        ],
+        "Dt": 0.01,
+        "isSingleFile": false,
+        "numSims": 3,
+        "numFrames": 1300,
+        "numSpatialDim": 2
     },
     "airfoils": {
         "PDE": "Navier-Stokes",
@@ -68,6 +80,9 @@
         ],
         "Constants": [],
         "Dt": 0.01,
-        "isSingleFile": true
+        "isSingleFile": true,
+        "numSims": 400,
+        "numFrames": 2,
+        "numSpatialDim": 2
     }
 }
