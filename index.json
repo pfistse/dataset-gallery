@@ -1,4 +1,18 @@
 {
+    "incompressible-wake-flow-tiny": {
+        "PDE": "Navier-Stokes",
+        "Fields Scheme": "VVd",
+        "Fields": [
+            "Velocity X",
+            "Velocity Y",
+            "Density"
+        ],
+        "Constants": [
+            "Mach number"
+        ],
+        "Dt": 0.01,
+        "isSingleFile": false
+    },
     "transonic-cylinder-flow-tiny": {
         "Constants": [
             "Mach number"
@@ -12,20 +26,6 @@
         ],
         "Fields Scheme": "VVdp",
         "PDE": "Navier-Stokes",
-        "isSingleFile": false
-    },
-    "incompressible-wake-flow-tiny": {
-        "PDE": "Navier-Stokes",
-        "Fields Scheme": "VVd",
-        "Fields": [
-            "Velocity X",
-            "Velocity Y",
-            "Density"
-        ],
-        "Constants": [
-            "Mach number"
-        ],
-        "Dt": 0.01,
         "isSingleFile": false
     },
     "solver-in-the-loop-wake-flow": {
