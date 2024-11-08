@@ -73,8 +73,8 @@ def create_preview_video(
     video.release()
 
     # convert to browser compatible video codec
-    # os.system(f"ffmpeg -y -i tmp.mp4 -vcodec libx264 -f mp4 {path}")
-    # os.remove("tmp.mp4")
+    os.system(f"ffmpeg -y -i tmp.mp4 -vcodec libx264 -f mp4 {path}")
+    os.remove("tmp.mp4")
 
 
 index = pbdl.dataset.index()
