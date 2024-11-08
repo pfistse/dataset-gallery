@@ -3,6 +3,7 @@ name: Update Gallery
 on:
   workflow_dispatch:
 
+
 jobs:
   generate-videos:
     runs-on: ubuntu-latest
@@ -32,7 +33,7 @@ jobs:
       run: python scripts/create_videos.py
 
     - name: Upload generated videos and index
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: generated-content
         path: public/  # Change this to the directory containing the generated content
@@ -46,7 +47,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Download generated content
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v4
       with:
         name: generated-content
         path: public/  # Change this to the desired download directory
