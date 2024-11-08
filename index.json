@@ -1,0 +1,57 @@
+{
+    "incompressible-wake-flow-tiny": {
+        "PDE": "Navier-Stokes",
+        "Fields Scheme": "VVd",
+        "Fields": [
+            "Velocity X",
+            "Velocity Y",
+            "Density"
+        ],
+        "Constants": [
+            "Mach number"
+        ],
+        "Dt": 0.01
+    },
+    "transonic-cylinder-flow-tiny": {
+        "Constants": [
+            "Mach number"
+        ],
+        "Dt": 0.01,
+        "Fields": [
+            "Velocity X",
+            "Velocity Y",
+            "Density",
+            "Pressure"
+        ],
+        "Fields Scheme": "VVdp",
+        "PDE": "Navier-Stokes"
+    },
+    "ks-dataset": {
+        "Constants": [
+            "Domain size"
+        ],
+        "Dt": 0.01,
+        "Fields": [
+            "Velocity"
+        ],
+        "Fields Scheme": "v",
+        "PDE": "Kuramoto-Sivashinsky"
+    },
+    "solver-in-the-loop-wake-flow": {
+        "Constants": [
+            "Re"
+        ],
+        "Constants Desc": [
+            "Reynolds number varied via viscosity"
+        ],
+        "Desc": "Simple wake flow behind cylindrical obstacle",
+        "Dt": 1.0,
+        "Fields": [
+            "Marker",
+            "Velocity x",
+            "Velocity y"
+        ],
+        "Fields Scheme": "mVV",
+        "PDE": "Navier-Stokes with Obstacle"
+    }
+}
