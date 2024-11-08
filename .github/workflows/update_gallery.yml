@@ -66,19 +66,19 @@ jobs:
     - name: List build output
       run: ls -R ./build  # Change this to your build output directory
 
-    - name: Commit and push videos
-      env:
-        GH_PAT: ${{ secrets.GH_PAT }}
-      run: |
-        git config --global user.name 'Sebastian Pfister'
-        git config --global user.email 'sebastian.pfister@tum.de'
-        git status
-        git add public/
-        if ! git diff-index --quiet HEAD --; then
-          git commit -am 'added preview videos (automated)'
-          git push https://$GH_PAT@github.com/pfistse/dataset-gallery.git HEAD:main
-        else
-          echo "No changes to commit"
+    # - name: Commit and push videos
+    #   env:
+    #     GH_PAT: ${{ secrets.GH_PAT }}
+    #   run: |
+    #     git config --global user.name 'Sebastian Pfister'
+    #     git config --global user.email 'sebastian.pfister@tum.de'
+    #     git status
+    #     git add public/
+    #     if ! git diff-index --quiet HEAD --; then
+    #       git commit -am 'added preview videos (automated)'
+    #       git push https://$GH_PAT@github.com/pfistse/dataset-gallery.git HEAD:main
+    #     else
+    #       echo "No changes to commit"
 
     - name: Deploy to GitHub Pages
       if: success()
