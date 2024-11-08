@@ -13,21 +13,6 @@
         "Dt": 0.01,
         "isSingleFile": false
     },
-    "transonic-cylinder-flow-tiny": {
-        "Constants": [
-            "Mach number"
-        ],
-        "Dt": 0.01,
-        "Fields": [
-            "Velocity X",
-            "Velocity Y",
-            "Density",
-            "Pressure"
-        ],
-        "Fields Scheme": "VVdp",
-        "PDE": "Navier-Stokes",
-        "isSingleFile": false
-    },
     "solver-in-the-loop-wake-flow": {
         "Constants": [
             "Re"
@@ -56,6 +41,21 @@
         ],
         "Fields Scheme": "v",
         "PDE": "Kuramoto-Sivashinsky",
+        "isSingleFile": false
+    },
+    "transonic-cylinder-flow-tiny": {
+        "Constants": [
+            "Mach number"
+        ],
+        "Dt": 0.01,
+        "Fields": [
+            "Velocity X",
+            "Velocity Y",
+            "Density",
+            "Pressure"
+        ],
+        "Fields Scheme": "VVdp",
+        "PDE": "Navier-Stokes",
         "isSingleFile": false
     },
     "airfoils": {
