@@ -1,17 +1,4 @@
 {
-    "incompressible-wake-flow-tiny": {
-        "PDE": "Navier-Stokes",
-        "Fields Scheme": "VVd",
-        "Fields": [
-            "Velocity X",
-            "Velocity Y",
-            "Density"
-        ],
-        "Constants": [
-            "Mach number"
-        ],
-        "Dt": 0.01
-    },
     "transonic-cylinder-flow-tiny": {
         "Constants": [
             "Mach number"
@@ -24,18 +11,22 @@
             "Pressure"
         ],
         "Fields Scheme": "VVdp",
-        "PDE": "Navier-Stokes"
+        "PDE": "Navier-Stokes",
+        "isSingleFile": false
     },
-    "ks-dataset": {
+    "incompressible-wake-flow-tiny": {
+        "PDE": "Navier-Stokes",
+        "Fields Scheme": "VVd",
+        "Fields": [
+            "Velocity X",
+            "Velocity Y",
+            "Density"
+        ],
         "Constants": [
-            "Domain size"
+            "Mach number"
         ],
         "Dt": 0.01,
-        "Fields": [
-            "Velocity"
-        ],
-        "Fields Scheme": "v",
-        "PDE": "Kuramoto-Sivashinsky"
+        "isSingleFile": false
     },
     "solver-in-the-loop-wake-flow": {
         "Constants": [
@@ -52,6 +43,31 @@
             "Velocity y"
         ],
         "Fields Scheme": "mVV",
-        "PDE": "Navier-Stokes with Obstacle"
+        "PDE": "Navier-Stokes with Obstacle",
+        "isSingleFile": false
+    },
+    "ks-dataset": {
+        "Constants": [
+            "Domain size"
+        ],
+        "Dt": 0.01,
+        "Fields": [
+            "Velocity"
+        ],
+        "Fields Scheme": "v",
+        "PDE": "Kuramoto-Sivashinsky",
+        "isSingleFile": false
+    },
+    "airfoils": {
+        "PDE": "Navier-Stokes",
+        "Fields Scheme": "FFs",
+        "Fields": [
+            "Freestream flow velocity x",
+            "Freestream flow velocity y",
+            "Airfoil shape"
+        ],
+        "Constants": [],
+        "Dt": 0.01,
+        "isSingleFile": true
     }
 }
