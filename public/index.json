@@ -1,4 +1,42 @@
 {
+    "incompressible-wake-flow-tiny": {
+        "PDE": "Navier-Stokes",
+        "Fields Scheme": "VVd",
+        "Fields": [
+            "Velocity X",
+            "Velocity Y",
+            "Density"
+        ],
+        "Constants": [
+            "Mach number"
+        ],
+        "Dt": 0.01,
+        "isSingleFile": false,
+        "numSims": 3,
+        "numFrames": 1300,
+        "numSpatialDim": 2
+    },
+    "solver-in-the-loop-wake-flow": {
+        "Constants": [
+            "Re"
+        ],
+        "Constants Desc": [
+            "Reynolds number varied via viscosity"
+        ],
+        "Desc": "Simple wake flow behind cylindrical obstacle",
+        "Dt": 1.0,
+        "Fields": [
+            "Marker",
+            "Velocity x",
+            "Velocity y"
+        ],
+        "Fields Scheme": "mVV",
+        "PDE": "Navier-Stokes with Obstacle",
+        "isSingleFile": false,
+        "numSims": 10,
+        "numFrames": 500,
+        "numSpatialDim": 2
+    },
     "transonic-cylinder-flow-tiny": {
         "Constants": [
             "Mach number"
@@ -31,44 +69,6 @@
         "numSims": 6,
         "numFrames": 5200,
         "numSpatialDim": 1
-    },
-    "solver-in-the-loop-wake-flow": {
-        "Constants": [
-            "Re"
-        ],
-        "Constants Desc": [
-            "Reynolds number varied via viscosity"
-        ],
-        "Desc": "Simple wake flow behind cylindrical obstacle",
-        "Dt": 1.0,
-        "Fields": [
-            "Marker",
-            "Velocity x",
-            "Velocity y"
-        ],
-        "Fields Scheme": "mVV",
-        "PDE": "Navier-Stokes with Obstacle",
-        "isSingleFile": false,
-        "numSims": 10,
-        "numFrames": 500,
-        "numSpatialDim": 2
-    },
-    "incompressible-wake-flow-tiny": {
-        "PDE": "Navier-Stokes",
-        "Fields Scheme": "VVd",
-        "Fields": [
-            "Velocity X",
-            "Velocity Y",
-            "Density"
-        ],
-        "Constants": [
-            "Mach number"
-        ],
-        "Dt": 0.01,
-        "isSingleFile": false,
-        "numSims": 3,
-        "numFrames": 1300,
-        "numSpatialDim": 2
     },
     "airfoils": {
         "PDE": "Navier-Stokes",
