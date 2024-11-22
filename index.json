@@ -16,20 +16,23 @@
         "numFrames": 1300,
         "numSpatialDim": 2
     },
-    "ks-dataset": {
+    "transonic-cylinder-flow-tiny": {
         "Constants": [
-            "Domain size"
+            "Mach number"
         ],
         "Dt": 0.01,
         "Fields": [
-            "Velocity"
+            "Velocity X",
+            "Velocity Y",
+            "Density",
+            "Pressure"
         ],
-        "Fields Scheme": "v",
-        "PDE": "Kuramoto-Sivashinsky",
+        "Fields Scheme": "VVdp",
+        "PDE": "Navier-Stokes",
         "isSingleFile": false,
-        "numSims": 6,
-        "numFrames": 5200,
-        "numSpatialDim": 1
+        "numSims": 3,
+        "numFrames": 1000,
+        "numSpatialDim": 2
     },
     "solver-in-the-loop-wake-flow": {
         "Constants": [
@@ -52,38 +55,20 @@
         "numFrames": 500,
         "numSpatialDim": 2
     },
-    "transonic-cylinder-flow-tiny": {
+    "ks-dataset": {
         "Constants": [
-            "Mach number"
+            "Domain size"
         ],
         "Dt": 0.01,
         "Fields": [
-            "Velocity X",
-            "Velocity Y",
-            "Density",
-            "Pressure"
+            "Velocity"
         ],
-        "Fields Scheme": "VVdp",
-        "PDE": "Navier-Stokes",
+        "Fields Scheme": "v",
+        "PDE": "Kuramoto-Sivashinsky",
         "isSingleFile": false,
-        "numSims": 3,
-        "numFrames": 1000,
-        "numSpatialDim": 2
-    },
-    "rans-flow-demo": {
-        "PDE": "Reynolds-Averaged Navier Stokes",
-        "Fields Scheme": "pVV",
-        "Fields": [
-            "Pressure",
-            "Velocity x",
-            "Velocity y"
-        ],
-        "Constants": [],
-        "Dt": 0.01,
-        "isSingleFile": true,
-        "numSims": 10,
-        "numFrames": 2,
-        "numSpatialDim": 2
+        "numSims": 6,
+        "numFrames": 5200,
+        "numSpatialDim": 1
     },
     "airfoils": {
         "PDE": "Navier-Stokes",
@@ -97,6 +82,21 @@
         "Dt": 0.01,
         "isSingleFile": true,
         "numSims": 400,
+        "numFrames": 2,
+        "numSpatialDim": 2
+    },
+    "airfoils-test": {
+        "PDE": "Reynolds-Averaged Navier Stokes",
+        "Fields Scheme": "pVV",
+        "Fields": [
+            "Pressure",
+            "Velocity x",
+            "Velocity y"
+        ],
+        "Constants": [],
+        "Dt": 0.01,
+        "isSingleFile": true,
+        "numSims": 10,
         "numFrames": 2,
         "numSpatialDim": 2
     }
