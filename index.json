@@ -16,6 +16,24 @@
         "numFrames": 1300,
         "numSpatialDim": 2
     },
+    "transonic-cylinder-flow": {
+        "Constants": [
+            "Mach number"
+        ],
+        "Dt": 0.01,
+        "Fields": [
+            "Velocity X",
+            "Velocity Y",
+            "Density",
+            "Pressure"
+        ],
+        "Fields Scheme": "VVdp",
+        "PDE": "Navier-Stokes",
+        "isSingleFile": false,
+        "numSims": 41,
+        "numFrames": 1000,
+        "numSpatialDim": 2
+    },
     "ks-dataset": {
         "Constants": [
             "Domain size"
@@ -30,24 +48,6 @@
         "numSims": 6,
         "numFrames": 5200,
         "numSpatialDim": 1
-    },
-    "transonic-cylinder-flow-tiny": {
-        "Constants": [
-            "Mach number"
-        ],
-        "Dt": 0.01,
-        "Fields": [
-            "Velocity X",
-            "Velocity Y",
-            "Density",
-            "Pressure"
-        ],
-        "Fields Scheme": "VVdp",
-        "PDE": "Navier-Stokes",
-        "isSingleFile": false,
-        "numSims": 3,
-        "numFrames": 1000,
-        "numSpatialDim": 2
     },
     "solver-in-the-loop-wake-flow": {
         "Constants": [
@@ -70,39 +70,19 @@
         "numFrames": 500,
         "numSpatialDim": 2
     },
-    "transonic-cylinder-flow": {
-        "Constants": [
-            "Mach number"
-        ],
-        "Dt": 0.01,
+    "airfoils-test": {
+        "PDE": "Reynolds-Averaged Navier Stokes",
+        "Fields Scheme": "pVV",
         "Fields": [
-            "Velocity X",
-            "Velocity Y",
-            "Density",
-            "Pressure"
+            "Pressure",
+            "Velocity x",
+            "Velocity y"
         ],
-        "Fields Scheme": "VVdp",
-        "PDE": "Navier-Stokes",
-        "isSingleFile": false,
-        "numSims": 41,
-        "numFrames": 1000,
-        "numSpatialDim": 2
-    },
-    "incompressible-wake-flow-tiny": {
-        "PDE": "Navier-Stokes",
-        "Fields Scheme": "VVd",
-        "Fields": [
-            "Velocity X",
-            "Velocity Y",
-            "Density"
-        ],
-        "Constants": [
-            "Mach number"
-        ],
+        "Constants": [],
         "Dt": 0.01,
-        "isSingleFile": false,
-        "numSims": 3,
-        "numFrames": 1300,
+        "isSingleFile": true,
+        "numSims": 10,
+        "numFrames": 2,
         "numSpatialDim": 2
     },
     "airfoils": {
@@ -117,21 +97,6 @@
         "Dt": 0.01,
         "isSingleFile": true,
         "numSims": 400,
-        "numFrames": 2,
-        "numSpatialDim": 2
-    },
-    "airfoils-test": {
-        "PDE": "Reynolds-Averaged Navier Stokes",
-        "Fields Scheme": "pVV",
-        "Fields": [
-            "Pressure",
-            "Velocity x",
-            "Velocity y"
-        ],
-        "Constants": [],
-        "Dt": 0.01,
-        "isSingleFile": true,
-        "numSims": 10,
         "numFrames": 2,
         "numSpatialDim": 2
     }
